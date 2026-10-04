@@ -1,0 +1,16 @@
+    
+        h1 {
+            color: green;
+            font-size: 60px;
+            font-family: Arial, sans-serif, monospace, cursive; 
+                }
+        ul {
+            color: blue;
+            list-style-type: circle;
+            padding: 100px;
+        }
+        ol {
+            color: red;
+            list-style-type: decimal;
+            padding: 100px;
+        }

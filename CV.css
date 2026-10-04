@@ -1,0 +1,41 @@
+.cv-title{
+    color: blue;
+    font-size: 60px;
+    font-family: Arial, sans-serif, monospace;
+}
+
+.flex-container {
+    display: flex;
+}
+.cv-container {
+    display: flex;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
+.left{
+    border-style: solid;
+    border: 3 px ;
+    border-color: maroon;
+    height: auto;
+    width: 25%;
+    background-color: lightblue;
+}
+
+.right{
+    border-style: dashed;
+    border-color: green;
+    height: auto;
+    width: 75%;
+    background-color: lightgreen;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 5px;
+}
