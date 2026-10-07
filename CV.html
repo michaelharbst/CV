@@ -1,38 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
-    <link rel="stylesheet" href="CV.css">
+    <meta name="description" content="CV för Michael Harbst IT-profil med bakgrund inom systemutveckling och agilt ledarskap.">
+    <title>CV Michael Harbst</title>
+
+    <!-- CSS-fil containing style. -->
+    <link rel="stylesheet" href="cv.css">
 </head>
-
 <body>
-    <h1 class="cv-title">Curriculum Vitae</h1>
+    <!-- Hele CV'et. Klassen bruges bl.a. til A4-format og de to kolonner. -->
+    <main class="cv-container">
 
-    <div class="cv-container"><!--  cv-container -->
+        <!-- ==================== LEFT COLLUMN ==================== -->
+        <aside class="left-column">
+            <header class="identity">
+                <!--  Profilfoto  -->
+                <img src="michael.jpg" alt="Porträtt av Michael Harbst" class="profile-picture">
+                <br>
+                <h1>Michael Harbst</h1>
+                <br>
+                <p class="job-title">IT-profil med bakgrund inom programmering, systemutveckling och agilt ledarskap</p>
+            </header>
 
-        <!--  cv-container -->
-        <div class="left"><!--  left collumn -->
-        <div class="profile-pic-container">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-        <!-- img src="profile.jpg" alt="Profile Picture" class="profile-pic"> -->
-        </div> 
-            <h1>Personal Information</h1>
-            <p>Name: John Doe</p>
-            <p>Age: 30</p>
-            <p>Email: john.doe@example.com</p>
+            <!-- Kontaktoplysninger -->
+            <section class="sidebar-section contact">
+                <h2>Kontakt</h2>
+                <ul class="contact-list">
+                    <li><span aria-hidden="true">✉</span><a href="mailto:Michael.harbst@gmail.com">Michael.harbst@gmail.com</a></li>
+                    <li><span aria-hidden="true">☎</span><a href="tel:+46729401675">+46 72 940 16 75</a></li>
+                    <li><span aria-hidden="true">⌖</span><span>237 34 Bjärred, Sverige</span></li>
+                </ul>
+            </section>
+
+            <!-- Tekniske kompetencer -->
+            <section class="sidebar-section">
+                <h2>Programmeringsspråk och tekniker</h2>
+                <p>C#, .NET, APL, LabVIEW och MS SQL, HTML, CSS, React</p>
+            </section>
+
+            <section class="sidebar-section">
+                <h2>Systemutveckling</h2>
+                <p>Objektorienterad programmering, verksamhetskritiska system, felsökning, test, kvalitetssäkring och prestandaförbättringar.</p>
+            </section>
+
+            <section class="sidebar-section">
+                <h2>Verktyg och plattformar</h2>
+                <p>Jira, Azure DevOps, Confluence, Miro, VersionOne, CI/CD-flöden, Visual Studio och Git/GitHub.</p>
+            </section>
+
+            <section class="sidebar-section">
+                <h2>Data och analys</h2>
+                <p>Stark analytisk bakgrund från fysik, forskning och IT. Erfarenhet av datadrivet förbättringsarbete, mätetal, dashboards och uppföljning.</p>
+            </section>
+
+            <section class="sidebar-section">
+                <h2>Agila arbetssätt</h2>
+                <p>Scrum, SAFe, Kanban, LeSS, Spotify-modellen och Lean.</p>
+            </section>
+
+            <!-- Uddannelse, certificeringer og sprog -->
+            <section class="sidebar-section">
+                <h2>Utbildning</h2>
+                <ul>
+                    <li>Doktorsexamen i fysik, Lunds universitet / LTH</li>
+                    <li>Master/Cand.scient. i fysik, Köpenhamns universitet</li>
+                </ul>
+            </section>
+
+            <section class="sidebar-section">
+                <h2>Certifieringar</h2>
+                <ul>
+                    <li>Professional Scrum Master I</li>
+                    <li>SAFe Advanced Scrum Master</li>
+                    <li>SAFe Product Owner/Product Manager</li>
+                    <li>SAFe Release Train Engineer</li>
+                    <li>Agil projektledning</li>
+                    <li>Communication &amp; Stakeholder Management</li>
+                </ul>
+            </section>
+
+            <section class="sidebar-section">
+                <h2>Språk</h2>
+                <ul>
+                    <li>Danska – modersmål</li>
+                    <li>Svenska – avancerad</li>
+                    <li>Engelska – flytande</li>
+                </ul>
+            </section>
+        </aside>
+
+        <!-- ==================== Right collumn ==================== -->
+        <div class="right-column">
+            <!-- top profile -->
+            <section class="content-section profile">
+                <h2>Profil</h2>
+                <p>Jag är utbildad fysiker och har arbetat inom IT i cirka 20 år, först som programmerare och systemutvecklare och senare som Scrum Master, Agile Delivery Lead och Release Train Engineer i komplexa IT-miljöer.</p>
+                <p>Under min tid som doktorand vid LTH/Lunds universitet och under många år i industrin arbetade jag praktiskt med programmering, främst i C#, .NET, APL och LabVIEW. De senaste åren har jag framför allt arbetat med agilt ledarskap, teamutveckling, leveransflöde och samarbete mellan utveckling, produkt och verksamhet.</p>
+            </section>
+
+            <!--work experience headline. -->
+            <section class="content-section experience">
+                <h2>Arbetslivserfarenhet</h2>
+
+                <article class="role">
+                    <div class="role-heading">
+                        <h3>Uppdrag inom offentlig sektor och läkemedelssektorn</h3>
+                        <time>2025–2026</time>
+                    </div>
+                    <p class="role-summary">Fokus på IT-leverans, teamstruktur, backlogarbete och agila arbetssätt.</p>
+
+                    <h4>Novo Nordisk</h4>
+                    <ul>
+                        <li>Stödde två tvärfunktionella team inom AI och videoanalys.</li>
+                        <li>Arbetade nära produktägare, UX, utvecklare och dataspecialister.</li>
+                        <li>Stödde backlogstruktur och övergången från discovery till pilot.</li>
+                        <li>Bidrog till tydligare ansvar, bättre samarbete och ökad transparens kring leveransrisker.</li>
+                    </ul>
+
+                    <h4>Sundhedsdatastyrelsen</h4>
+                    <ul>
+                        <li>Stödde ett nytt IT-projekt med struktur, sprintarbete och arbetsflöde.</li>
+                        <li>Arbetade med att omsätta kravspecifikationer till hanterbara backlog-items.</li>
+                        <li>Bidrog till tydligare arbetssätt och stabilare leverans.</li>
+                    </ul>
+                </article>
+
+                <article class="role">
+                    <div class="role-heading">
+                        <div>
+                            <h3>Agile Delivery Lead / Scrum Master</h3>
+                            <p class="company">Alm. Brand Group</p>
+                        </div>
+                        <time>Aug 2023 – maj 2025</time>
+                    </div>
+                    <ul>
+                        <li>Arbetade med flera IT-team inom försäkring och digital leverans.</li>
+                        <li>Skapade dashboards för transparens, leveransuppföljning och beslut.</li>
+                        <li>Koordinerade mellan utveckling, QA, DevOps, produktägare och verksamhet.</li>
+                        <li>Bidrog till gemensam Definition of Done och bättre samarbete mellan team.</li>
+                    </ul>
+                    <p class="result"><strong>Resultat:</strong> Förbättrad leveransförutsägbarhet till över 80 procent samt minskad omarbetning och bättre kvalitet.</p>
+                </article>
+
+                <article class="role compact-role">
+                    <div class="role-heading">
+                        <div>
+                            <h3>Scrum Master</h3>
+                            <p class="company">Configit</p>
+                        </div>
+                        <time>Apr 2023 – jul 2023</time>
+                    </div>
+                    <p>Scrum Master för två produktteam.</p>
+                </article>
+
+                <article class="role">
+                    <div class="role-heading">
+                        <div>
+                            <h3>Release Train Engineer</h3>
+                            <p class="company">Nordea</p>
+                        </div>
+                        <time>Jan 2022 – maj 2023</time>
+                    </div>
+                    <ul>
+                        <li>Release Train Engineer för ett distribuerat Agile Release Train med flera team.</li>
+                        <li>Faciliterade PI Planning, Scrum of Scrums, uppföljning och tvärgående samordning.</li>
+                    </ul>
+                    <p class="result"><strong>Resultat:</strong> Stabil leverans i en komplex, distribuerad miljö och bättre transparens kring beroenden, risker och leverans.</p>
+                </article>
+
+                <article class="role">
+                    <div class="role-heading">
+                        <div>
+                            <h3>Scrum Master</h3>
+                            <p class="company">Nordea</p>
+                        </div>
+                        <time>Okt 2019 – jan 2022</time>
+                    </div>
+                    <ul>
+                        <li>Scrum Master för utvecklingsteam inom bank, mobilbank och betalningsområdet.</li>
+                        <li>Arbetade med teamstruktur, sprintleverans, externa beroenden och incidentuppföljning.</li>
+                    </ul>
+                    <p class="result"><strong>Resultat:</strong> Incidentbackloggen reducerades från över 300 till under 50 på cirka två månader.</p>
+                </article>
+
+                <article class="role">
+                    <div class="role-heading">
+                        <div>
+                            <h3>Senior systemutvecklare</h3>
+                            <p class="company">SimCorp</p>
+                        </div>
+                        <time>2012–2019</time>
+                    </div>
+                    <p class="role-summary">Design och utveckling av beräkningar och funktionalitet för finansiella instrument.</p>
+                    <ul>
+                        <li>Arbetade med agil mjukvaruutveckling i Scrum-team inom SAFe-ramverket.</li>
+                        <li>Utvecklade backend- och servernära funktionalitet för finansiella instrument.</li>
+                        <li>Arbetade med prestanda, skalbara lösningar, telemetri och Docker.</li>
+                        <li>Arbetade från januari 2019 som Scrum Master för ett nytt team.</li>
+                    </ul>
+                </article>
+
+                <article class="role">
+                    <div class="role-heading">
+                        <div>
+                            <h3>Senior systemutvecklare</h3>
+                            <p class="company">Edlund</p>
+                        </div>
+                        <time>2007–2012</time>
+                    </div>
+                    <p class="role-summary">Design och utveckling av lösningar för administration av försäkrings- och pensionssystem med tillämpning av aktuariell matematik och datavetenskap.</p>
+                    <ul>
+                        <li>Systemutveckling i C# och .NET.</li>
+                        <li>Databasutveckling i MS SQL Server.</li>
+                        <li>Scrum Master för teamet i en agil utvecklingsmiljö.</li>
+                        <li>Arbetade även med SharePoint och wiki.</li>
+                    </ul>
+                </article>
+            </section>
         </div>
-       
-        <div class="right"><!--  right collumn -->
-            <div class="section">
-                <h1>Education</h1>
-                <p>Bachelor of Science in Computer Science</p>
-                <p>University of Example, 2010 - 2014</p>
-        </div>
-<!-- test commit now git bsh -->
-    </div>
+    </main>
 </body>
-
 </html>

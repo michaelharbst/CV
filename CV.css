@@ -1,41 +1,290 @@
-.cv-title{
-    color: blue;
-    font-size: 60px;
-    font-family: Arial, sans-serif, monospace;
+/* ================================================================
+   Default colors for the CV. The colors are collected as variables, so they are easy to change.
+
+   ================================================================ */
+:root {
+    --sidebar: #183b4e;
+    --sidebar-breaker: #289993;
+    --heading: #183b4e;
+    --text: #3a3228;
+    --line: #d8e1e4;
+    --paper: #ffffff;
+    --background: #e9eef0;
 }
 
-.flex-container {
-    display: flex;
+* {
+    box-sizing: border-box;
 }
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.48;
+}
+
+/* ================================================================
+   MAIN LAYOUT - left and right column
+   ================================================================ */
 .cv-container {
-    display: flex;
-    /* flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-}
-
-.left{
-    border-style: solid;
-    border: 3 px ;
-    border-color: maroon;
-    height: auto;
-    width: 25%;
-    background-color: lightblue;
-}
-
-.right{
-    border-style: dashed;
-    border-color: green;
-    height: auto;
-    width: 75%;
-    background-color: lightgreen;
-}
-
-img {
-    width: 100%;
-    height: auto;
+    display: grid;
+    grid-template-columns: 25% 69%;
+    width: min(100%, 1100px);
     margin: 0 auto;
-    border-style: solid;
+    background: var(--paper);
+
+}
+
+.left-column {
+    padding: 3rem 2.1rem;
+    color: #ffffff;
+    background: var(--sidebar);
+}
+
+.right-column {
+    padding: 3rem 3.2rem;
+}
+
+/* ================================================================
+   Name, title and profile picture
+   ================================================================ */
+.identity {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.initials,
+.profile-picture {
+    width: 112px;
+    height: 112px;
+    margin: 0 auto 1.4rem;
+    border: 4px solid rgba(255, 255, 255, 0.8);
     border-radius: 50%;
-    border-width: 5px;
+}
+
+.initials {
+    display: grid;
+    place-items: center;
+    color: var(--sidebar);
+    background: var(--sidebar-breaker);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.profile-picture {
+    display: block;
+    object-fit: cover;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+.job-title {
+    margin: 0.9rem 0 0;
+    color: #dbe9ed;
+    font-size: 0.95rem;
+}
+
+/* ================================================================
+   left column sections
+   ================================================================ */
+.sidebar-section {
+    margin-top: 3rem;
+}
+
+.sidebar-section h2 {
+    margin: 0 0 0.7rem;
+    padding-bottom: 0.42rem;
+    border-bottom: 2px solid var(--sidebar-breaker);
+    color: #ffffff;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.sidebar-section p,
+.sidebar-section li,
+.sidebar-section a {
+    color: #e8f0f2;
+    font-size: 0.88rem;
+}
+
+.sidebar-section p {
+    margin: 0;
+}
+
+.sidebar-section ul {
+    margin: 0;
+    padding-left: 1.15rem;
+}
+
+.sidebar-section li + li {
+    margin-top: 0.45rem;
+}
+
+.contact-list {
+    padding: 0 !important;
+    list-style: none;
+}
+
+.contact-list li {
+    display: grid;
+    grid-template-columns: 1.3rem 1fr;
+    gap: 0.5rem;
+    align-items: start;
+    overflow-wrap: anywhere;
+}
+
+.contact-list a {
+    text-decoration: none;
+}
+
+.contact-list a:hover,
+.contact-list a:focus {
+    color: var(--sidebar-breaker);
+    text-decoration: underline;
+}
+
+/* ================================================================
+   right column sections
+   ================================================================ */
+.content-section > h2 {
+    margin: 0 0 1.2rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 3px solid var(--heading);
+    color: var(--heading);
+    font-size: 1.55rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.profile p {
+    margin: 0 0 0.85rem;
+}
+
+.experience {
+    margin-top: 2.4rem;
+}
+
+/* One work experience */
+.role {
+    position: relative;
+    margin-top: 1.7rem;
+    padding: 0 0 1.55rem 1.35rem;
+    border-left: 2px solid var(--line);
+
+}
+
+.role::before {
+    position: absolute;
+    top: 0.3rem;
+    left: -6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--sidebar-breaker);
+    content: "";
+}
+
+.role-heading {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.role h3 {
+    margin: 0;
+    color: var(--heading);
+    font-size: 1.08rem;
+}
+
+.role h4 {
+    margin: 1.1rem 0 0.35rem;
+    color: var(--heading);
+    font-size: 0.98rem;
+}
+
+.company {
+    margin: 0.15rem 0 0;
+    color: var(heading);
+    font-weight: 700;
+}
+
+.role time {
+    flex: 0 0 auto;
+    color: var(heading);
+    font-size: 0.86rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.role-summary {
+    margin: 0.55rem 0 0.65rem;
+    color: var(heading);
+    font-style: italic;
+}
+
+.role ul {
+    margin: 0.65rem 0 0;
+    padding-left: 1.2rem;
+}
+
+.role li + li {
+    margin-top: 0.3rem;
+}
+
+.result {
+    margin: 0.8rem 0 0;
+    padding: 0.65rem 0.8rem;
+    border-left: 3px solid var(--sidebar-breaker);
+    background: #f2f7f7;
+}
+
+.compact-role p:last-child {
+    margin-bottom: 0;
+}
+
+/* ================================================================
+   RESPONSIVE layout - one column on small screens
+   ================================================================ */
+@media (max-width: 760px) {
+    body {
+        padding: 0;
+    }
+
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+
+    .left-column,
+    .right-column {
+        padding: 2rem 1.5rem;
+    }
+
+    .role-heading {
+        display: block;
+    }
+
+    .role time {
+        display: block;
+        margin-top: 0.25rem;
+    }
+}
+
+/* ================================================================
+  Print / PDF - A4 format
+   ================================================================ */
+@page {
+    size: A4;
+    margin: 0;
 }
